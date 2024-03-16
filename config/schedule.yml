@@ -1,4 +1,9 @@
-my_first_job:
-  cron: "*/5 * * * *"
+hourly_worker_job:
+  cron: "0 * * * *"
   class: "HourlyWorkerJob"
+  queue: default
+
+daily_worker_job:
+  cron: "59 23 * * *"
+  class: "DailyWorkerJob"
   queue: default
