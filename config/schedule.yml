@@ -4,6 +4,6 @@ hourly_worker_job:
   queue: default
 
 daily_worker_job:
-  cron: "59 23 * * *"
+  cron: "59 23 * * * Asia/Jakarta"
   class: "DailyWorkerJob"
   queue: default

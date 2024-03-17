@@ -1,0 +1,28 @@
+<h1>List Users</h1>
+
+<div> Female count: <%= REDIS.get('female_count') %> </div>
+<div> Male count: <%= REDIS.get('male_count') %> </div>
+<div> Total users: <%= REDIS.get('female_count').to_i + REDIS.get('male_count').to_i %> </div>
+
+<%= button_to "Daily Record Reports", daily_records_path, method: :get %>
+
+<table class="table">
+  <tr>
+    <th scope="col">Name</th>
+    <th scope="col">Age</th>
+    <th scope="col">Gender</th>
+    <th scope="col">Created At</th>
+  </tr>
+
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.full_name %></td>
+      <td><%= user.age %></td>
+      <td><%= user.gender %></td>
+      <td><%= user.created_at %></td>
+      <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', data: { turbo_confirm: 'Are you sure?', turbo_method: :delete } %></td>
+    </tr>
+  <% end %>
+</table>
+
+<br />
