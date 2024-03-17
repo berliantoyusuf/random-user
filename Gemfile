@@ -76,4 +76,6 @@ gem "sidekiq-cron"
 gem "sidekiq-status"
 
 gem "redis-namespace"
-gem 'httparty'
+gem "httparty"
+gem "liquid"
+gem "pry"
