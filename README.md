@@ -1,24 +1,27 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+** This repository has not been deployed yet to server. If needed for functional presentation, we can use application such as ngrok
 
-Things you may want to cover:
+How To Use:
 
-* Ruby version
+* Make sure that redis and postgres has been installed.
 
-* System dependencies
+* Run rails server
 
-* Configuration
+* Run bundle exec sidekiq
 
-* Database creation
+* Open /sidekiq/cron
 
-* Database initialization
+* Wait until one hour, or click enqueue now on hourly_worker_job
 
-* How to run the test suite
+* Open the homepage, there should be numbers of random user data
 
-* Services (job queues, cache servers, search engines, etc.)
+* Go back to /sidekiq/cron and click enqueue now on daily_worker_job
 
-* Deployment instructions
+* Open the daily report records
 
-* ...
+* The daily report records should be filled with the new data.
+
+* Go back to list users page, try to delete one contact
+
+* Open the daily report, the number and average age for male/female will be changed.
