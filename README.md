@@ -1,5 +1,7 @@
 # README
 
+** This repository has not been deployed yet to server. If needed for functional presentation, we can use application such as ngrok
+
 How To Use:
 
 * Make sure that redis and postgres has been installed.
