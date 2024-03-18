@@ -1,11 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+How To Use:
 
 Things you may want to cover:
 
-* Ruby version
+* Make sure that redis and postgres has been installed.
 
 * System dependencies
 
