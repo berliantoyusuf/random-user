@@ -34,8 +34,7 @@ class User < ApplicationRecord
       REDIS.set('male_count', male_count)
     end
 
-    date = Time.now.to_date.to_s
-    daily_record = DailyRecord.find_or_create_by(date: date)
+    daily_record = DailyRecord.find_or_create_by(date: self.created_at.to_date.to_s)
 
     daily_record.female_count = female_count
     daily_record.male_count   = male_count
